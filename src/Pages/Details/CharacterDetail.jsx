@@ -2,14 +2,14 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { HomeContainer } from "./style.js";
-import morty from "../../Assets/morty.gif";
+import { MdFavoriteBorder } from "react-icons/md";
 
 const CharacterDetail = () => {
   const params = useParams();
   const episodeId = params.id;
 
   const [episodeData, setEpisodeData] = useState(null);
-  
+
   useEffect(() => {
     axios
       .get(`https://rickandmortyapi.com/api/character/${episodeId}`)
@@ -32,10 +32,10 @@ const CharacterDetail = () => {
           <p>Status: {episodeData.status}</p>
           <p>Species: {episodeData.species}</p>
           <p>Gender: {episodeData.gender}</p>
+          <p>Origin: {episodeData.origin.name}</p>
           <p>Location: {episodeData.location.name}</p>
         </div>
       </div>
-      
     </HomeContainer>
   );
 };

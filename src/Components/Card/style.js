@@ -3,14 +3,14 @@ import styled from 'styled-components'
 export const StyledCard = styled.div`
  
   width: 20rem;
-  height: 28rem;
+  height: 30rem;
   //background: linear-gradient(0deg, rgba(156,234,46,1) 20%, rgba(103,150,37,1) 90%, rgba(67,99,21,1) 100%); 
   //border: 1px solid rgba(156,234,46,1);
   border-radius: 0.5rem;
   padding: 1rem;
   background: rgba(0, 0,0 , 0.2);
   box-shadow: hsl(var(--saturated-green)) 0px 0px 30px -20px;
-  cursor: pointer;
+  
   
 
   display: flex;
@@ -76,12 +76,24 @@ export const StyledCard = styled.div`
     padding: 5px;
     background: linear-gradient(0deg, rgba(156,234,46,1) 20%, rgba(103,150,37,1) 90%, rgba(67,99,21,1) 100%); 
     box-shadow: hsl(var(--saturated-green)) 0px 12px 50px -15px;
+    cursor: pointer;
   }
   
   h3 {
     font-size: 2rem ;
     font-family: 'M PLUS 1 Code', sans-serif;
     height: 8rem;
+    cursor: pointer;
+  }
+
+  .fav{
+    height: 1rem;
+    color:red;
+    margin-top: -65px;
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
   }
 
   p{

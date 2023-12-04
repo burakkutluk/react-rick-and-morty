@@ -98,7 +98,9 @@ export const HomeContainer = styled.div`
     }
   }
 
-  
+  ul{
+    padding: 2rem;
+  }
 
   img{
     border-radius: 50%;
@@ -107,6 +109,7 @@ export const HomeContainer = styled.div`
   h2 {
     font-size: 3rem;
     width: 80%;
+    margin-top: 8rem;
     margin-bottom: 3rem;
     font-style: italic;
     color: white;

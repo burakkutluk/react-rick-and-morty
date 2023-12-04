@@ -21,21 +21,14 @@ const PageDetail = () => {
     setGifPos("hide");
   }
 
-  const getCharacters = () => {
-    axios
-      .get(`https://rickandmortyapi.com/api/character`)
-      .then((response) => setCharacterData(response.data))
-      .catch((error) => console.error(error));
-  };
-
+  
   useEffect(() => {
     axios
       .get(`https://rickandmortyapi.com/api/episode/${episodeId}`)
       .then((response) => setEpisodeData(response.data))
       .catch((error) => console.error(error));
 
-  }, [episodeData]);
-
+  }, [episodeId]);
 
 
   if (!episodeData) {
@@ -49,6 +42,11 @@ const PageDetail = () => {
         <h2>{episodeData.name}</h2>
         <p>Air Date: {episodeData.air_date}</p>
         <p>Episode: {episodeData.episode}</p>
+        <ul>
+        {episodeData.characters.map((character) => (
+          <li key={character}> <a href={`/characterDetail/${character.substring(character.lastIndexOf("/") + 1)}`} >{character}</a></li>
+        ))}
+      </ul>
       </div>
       <div className="gif-wrapper">
         <img className={gifPos} id="home-gif" src={morty} alt="morty" />

@@ -121,6 +121,12 @@ export const HomeContainer = styled.div`
     border-radius: 50%;
   }
 
+  .fav{
+    width: 10%;
+    margin-left: 1rem;
+    cursor: pointer;
+  }
+
   h2 {
     display: flex;
     flex-direction: column;
